@@ -12,7 +12,7 @@ document.addEventListener 'DOMContentLoaded', ->
     camera = new (THREE.PerspectiveCamera)(75, window.innerWidth / window.innerHeight, 1, 10000)
     camera.position.z = 1000
     geometry = new (THREE.BoxGeometry)(200, 200, 200)
-    texture = THREE.ImageUtils.loadTexture('assets/block.png');
+    texture = THREE.ImageUtils.loadTexture('images/block.png');
     material = new (THREE.MeshBasicMaterial)(
       map: texture )
     mesh = new (THREE.Mesh)(geometry, material)
