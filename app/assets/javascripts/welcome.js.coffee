@@ -37,8 +37,8 @@ document.addEventListener 'DOMContentLoaded', ->
   animate()
 
   source = Rx.Observable.timer(1000, 500)
-           .select((x, idx, obs)-> return 1 )
-           .scan((acc, current) -> return acc + current)
+           .select((x, idx, obs)-> return 1)
+           .scan((acc, current)-> return acc + current)
   source.subscribe((x) ->
     if (x % 2 == 0)
       mesh.material.map = texture1
